@@ -29,5 +29,6 @@ public class Prueba {
         
         System.out.println("Muestrame las cordenadas 2, x=" + coordenada2.getX() + " y=" + coordenada2.getY() );
         
+        
     }
 }

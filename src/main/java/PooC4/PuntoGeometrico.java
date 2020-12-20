@@ -19,6 +19,10 @@ public class PuntoGeometrico {
         this.x = x;
         this.y = y;
     }
+    
+    public PuntoGeometrico (){
+        
+    }
 
     public double getX() {
         return x;
