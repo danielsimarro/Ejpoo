@@ -10,35 +10,47 @@ package PooC4;
  * @author NitroPc
  */
 public class Linea {
+
     private PuntoGeometrico puntoA;
     private PuntoGeometrico puntoB;
-    
-    public Linea (){
-        puntoA.x = 0;
-        puntoA.y = 0;
-        puntoB.x = 1;
-        puntoB.y = 1;
+
+    public Linea() {
+
+        this.puntoA = new PuntoGeometrico(0, 0);
+        this.puntoB = new PuntoGeometrico(1, 1);
     }
-    
-    public Linea (PuntoGeometrico a, PuntoGeometrico b){
+
+    public Linea(PuntoGeometrico a, PuntoGeometrico b) {
         this.puntoA = a;
         this.puntoB = b;
     }
-    
-    public void mueveDerecha(double x){
-        puntoA.x += x;
+
+    public void mueveDerecha(double x) {
+        //si queremso moverlo a la derecha, ambos puntos, la coordenada x se 
+        //sumara tantas unidades como sea marcado por el objeto
+        this.puntoA.setX(puntoA.getX() + x);
+        this.puntoB.setX(puntoB.getX() + x);
     }
     
-    public void mueveIzquierda(double x){
-        puntoB.x += x;
+    public void mueveIzquierda(double x) {
+        //si queremso moverlo a la izquierda, ambos puntos, la coordenada x se 
+        //restara tantas unidades como sea marcado por el objeto
+        this.puntoA.setX(puntoA.getX() - x);
+        this.puntoB.setX(puntoB.getX() - x);
     }
-    
-    public void mueveArriba(double y){
-        puntoA.y += y;
+
+    public void mueveArriba(double y) {
+        //si queremso moverlo hacia arriba, ambos puntos, la coordenada y se 
+        //sumara tantas unidades como sea marcado por el objeto
+        this.puntoA.setY(puntoA.getY() + y);
+        this.puntoB.setY(puntoB.getY() + y);
     }
-    
-    public void mueveAbajo(double y){
-        puntoB.y += y;
+
+    public void mueveAbajo(double y) {
+        //si queremso moverlo hacia abajo, ambos puntos, la coordenada y se 
+        //restara tantas unidades como sea marcado por el objeto
+        this.puntoA.setY(puntoA.getY() - y);
+        this.puntoB.setY(puntoB.getY() - y);
     }
 
     public PuntoGeometrico getPuntoA() {
@@ -56,8 +68,8 @@ public class Linea {
     public void setPuntoB(PuntoGeometrico puntoB) {
         this.puntoB = puntoB;
     }
-    
-    public void MostrarLinea(){
-        System.out.println("[(" + puntoA.x + "," + puntoA.y + "),(" + puntoB.x + "," + puntoB.y + ")]" );
+
+    public void MostrarLinea() {
+        System.out.println("[(" + puntoA.getX() + "," + puntoA.getY() + "),(" + puntoB.getX() + "," + puntoB.getY() + ")]");
     }
 }

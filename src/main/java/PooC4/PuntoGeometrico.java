@@ -11,8 +11,8 @@ package PooC4;
  */
 public class PuntoGeometrico {
     
-    double x;
-    double y;
+    private double x;
+    private double y;
     
     public PuntoGeometrico (double x, double y){
         
@@ -38,6 +38,11 @@ public class PuntoGeometrico {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "PuntoGeometrico{" + "x=" + x + ", y=" + y + '}';
     }
     
     

@@ -17,7 +17,7 @@ public class Prueba {
         
         PuntoGeometrico coordenada2 = new PuntoGeometrico(20,8.50);
         
-        System.out.println("Muestrame las cordenadas 1, x=" + coordenada1.getX() + " y=" + coordenada1.getY() );
+        /*System.out.println("Muestrame las cordenadas 1, x=" + coordenada1.getX() + " y=" + coordenada1.getY() );
         
         System.out.println("Muestrame las cordenadas 2, x=" + coordenada2.getX() + " y=" + coordenada2.getY() );
         
@@ -27,8 +27,21 @@ public class Prueba {
         
         coordenada2.setY(30);
         
-        System.out.println("Muestrame las cordenadas 2, x=" + coordenada2.getX() + " y=" + coordenada2.getY() );
+        System.out.println("Muestrame las cordenadas 2, x=" + coordenada2.getX() + " y=" + coordenada2.getY() );*/
         
+        PuntoGeometrico valorPredeterminado = new PuntoGeometrico ();
+        PuntoGeometrico  puntoA = new PuntoGeometrico (4,2);
+        PuntoGeometrico  puntoB = new PuntoGeometrico (8,6);
+        
+        Linea linea1 = new Linea ();
+        Linea linea2 = new Linea(puntoA, puntoB);
+        
+        linea1.MostrarLinea();
+        linea1.mueveDerecha(4);
+        linea1.mueveAbajo(1);
+        linea1.MostrarLinea();
+        
+        linea2.MostrarLinea();
         
     }
 }
